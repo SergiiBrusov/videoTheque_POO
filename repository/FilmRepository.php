@@ -25,7 +25,7 @@ abstract class FilmRepository extends Connect{
         $statement->execute();
         return $statement->fetchAll();
     }
-    protected function getFilm($id){
+    protected function getFilmById($id){
         $rq = "SELECT * FROM movies_full WHERE id_movie = $id";
         $statement = $this->pdo->prepare($rq);
         $statement->execute();

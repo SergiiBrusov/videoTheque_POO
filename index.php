@@ -12,12 +12,12 @@ include("./templates/header.html");
                 <h5 class="card-title"><?php echo $value["directors"]; ?></h5>
                 <h6 class="card-subtitle text-muted"><?php echo $value["year"]; ?></h6>
             </div>
-            <img class="img-fluid" src="./assets/img/posters/<?php echo $value["id_movie"]; ?>.jpg" alt="">
+            <img class="img-fluid" src=<?= $value["urlPoster"]; ?> alt="">
             <div class="card-body">
                 <p class="card-text"><?php echo $value["plot"]; ?></p>
             </div>
             <div class="card-body">
-                <a href="#" class="card-link">Plus d'Info</a>
+                <a href="./film.php?id_movie=<?= $value["id_movie"]; ?>" class="card-link">Plus d'Info</a>
             </div>
         </div>
     <?php endforeach; ?>
